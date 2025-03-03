@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.boards {
+  display: flex;
+  gap: 20px;
+}
+
+.board {
+  border: 1px solid black;
+  height: 60vh;
+  width: 250px;
+  border-radius: 10px;
+}
