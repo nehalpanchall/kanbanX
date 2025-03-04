@@ -34,6 +34,11 @@
   border-radius: 10px;
 }
 
+.task:hover {
+  background-color: #4e4e4e;
+  color: white;
+}
+
 .add-task-btn {
   height: 30px;
   width: 150px;
