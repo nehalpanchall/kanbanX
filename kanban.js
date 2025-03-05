@@ -13,14 +13,22 @@ addTaskbtn.addEventListener('click', () => {
   board.appendChild(paragraphTag);
 
   paragraphTag.setAttribute('draggable', true);
+
+  paragraphTag.addEventListener('dragstart', () => {
+    paragraphTag.classList.add('flying');
+  });
+
+  paragraphTag.addEventListener('dragend', () => {
+    paragraphTag.classList.remove('flying');
+  });
 });
 
 tasks.forEach((task) => {
-  return task.addEventListener('dragstart', () => {
+  task.addEventListener('dragstart', () => {
     task.classList.add('flying');
+  });
 
-    task.addEventListener('dragend', () => {
-      task.classList.remove('flying');
-    });
+  task.addEventListener('dragend', () => {
+    task.classList.remove('flying');
   });
 });
