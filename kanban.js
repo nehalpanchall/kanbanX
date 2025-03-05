@@ -4,6 +4,16 @@ const board = document.querySelector('.board');
 
 const tasks = document.querySelectorAll('.task');
 
+const addFlyingClass = (element) => {
+  element.addEventListener('dragstart', () => {
+    element.classList.add('flying');
+  });
+
+  element.addEventListener('dragend', () => {
+    element.classList.remove('flying');
+  });
+};
+
 addTaskbtn.addEventListener('click', () => {
   const paragraphTag = document.createElement('p');
   paragraphTag.innerText = prompt('Task name');
@@ -14,21 +24,9 @@ addTaskbtn.addEventListener('click', () => {
 
   paragraphTag.setAttribute('draggable', true);
 
-  paragraphTag.addEventListener('dragstart', () => {
-    paragraphTag.classList.add('flying');
-  });
-
-  paragraphTag.addEventListener('dragend', () => {
-    paragraphTag.classList.remove('flying');
-  });
+  addFlyingClass(paragraphTag);
 });
 
 tasks.forEach((task) => {
-  task.addEventListener('dragstart', () => {
-    task.classList.add('flying');
-  });
-
-  task.addEventListener('dragend', () => {
-    task.classList.remove('flying');
-  });
+  addFlyingClass(task);
 });
