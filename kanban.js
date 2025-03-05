@@ -17,6 +17,10 @@ addTaskbtn.addEventListener('click', () => {
 
 tasks.forEach((task) => {
   return task.addEventListener('dragstart', () => {
-    console.log(`dragstart on`);
+    task.classList.add('flying');
+
+    task.addEventListener('dragend', () => {
+      task.classList.remove('flying');
+    });
   });
 });
