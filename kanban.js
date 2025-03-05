@@ -30,3 +30,13 @@ addTaskbtn.addEventListener('click', () => {
 tasks.forEach((task) => {
   addFlyingClass(task);
 });
+
+const allBoards = document.querySelectorAll('.board');
+
+allBoards.forEach((singleBoard) => {
+  singleBoard.addEventListener('dragover', () => {
+    const flyingTask = document.querySelector('.flying');
+
+    singleBoard.appendChild(flyingTask);
+  });
+});
