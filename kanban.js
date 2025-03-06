@@ -40,3 +40,36 @@ allBoards.forEach((singleBoard) => {
     singleBoard.appendChild(flyingTask);
   });
 });
+
+const darkModeBtn = document.querySelector('.darkModeBtn');
+
+darkModeBtn.addEventListener('click', () => {
+  if (darkModeBtn.textContent === 'Dark Mode') {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+
+    darkModeBtn.textContent = 'Light Mode';
+
+    tasks.forEach((task) => {
+      task.classList.add('toggleTask');
+    });
+
+    allBoards.forEach((board) => {
+      board.classList.add('toggleBoard');
+    });
+  } else {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+    darkModeBtn.textContent = 'Dark Mode';
+
+    tasks.forEach((task) => {
+      task.classList.add('task');
+      task.classList.remove('toggleTask');
+    });
+
+    allBoards.forEach((board) => {
+      board.classList.add('board');
+      board.classList.remove('toggleBoard');
+    });
+  }
+});

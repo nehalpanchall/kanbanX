@@ -37,10 +37,30 @@
 .task:hover {
   background-color: #4e4e4e;
   color: white;
+  cursor: pointer;
 }
 
 .add-task-btn {
   height: 30px;
   width: 150px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.darkModeBtn {
+  float: right;
+  margin-right: 30px;
+
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.toggleBoard {
+  border: 1px solid seashell;
+}
+
+.toggleTask {
+  border: 1px solid rgb(247, 242, 242);
 }
