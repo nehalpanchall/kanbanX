@@ -45,7 +45,7 @@ const darkModeBtn = document.querySelector('.darkModeBtn');
 
 darkModeBtn.addEventListener('click', () => {
   if (darkModeBtn.textContent === 'Dark Mode') {
-    document.body.style.backgroundColor = 'black';
+    document.body.style.backgroundColor = '#3d3d3d';
     document.body.style.color = 'white';
 
     darkModeBtn.textContent = 'Light Mode';
